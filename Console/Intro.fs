@@ -43,6 +43,13 @@ module Intro =
       | _ -> -1
 
 
+   let zero = 0
+
+   let rec powerNo = function
+            | (x,zero) -> 1.0                // This does NOT work
+            | (x,n) -> x * powerNo(x,n-1)
+
+
 
 
    
@@ -95,6 +102,11 @@ module Intro =
 
    // we can write out with prefix
    let output = List.iter2 (fun x y -> printf "%s %s !" (prefix x) y) gender names 
+
+   let rec SumPos a = match a with
+                      | [] -> 0
+                      | x::rest when x > 0 -> x + SumPos rest
+                      | x::rest -> SumPos rest 
 
 
 
