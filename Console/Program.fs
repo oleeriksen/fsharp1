@@ -1,5 +1,6 @@
 ﻿namespace Console
 open System
+open Intro
 module Main =
 
 
@@ -20,8 +21,7 @@ module Main =
             if n = 0 then []
             elif  filter n then (AListWithFilter (n-1) filter) @ [n]
             else AListWithFilter (n-1) filter
-
-    // exercise: solve exercise 1 from compulsory assignment in Contracts. 
+            
 
     let TrueDivisors n = [2..n-1] |> List.filter (fun d -> n % d = 0)
 
@@ -42,6 +42,11 @@ module Main =
         //(AListWithFilter 100 IsPrime) |> Seq.iter (fun x -> printf "%d " x)
         printfn "Primtal mellem 2 og 100 %A" (AListWithFilter 100 IsPrime) 
        //[1..10] |> Seq.iter (fun x -> printf "%d isEven %b " x (IsEven x))
-      
+
+
+    let main2 arg = 
+        printf "SumPos %A = %d" arg (SumPos arg)
+
+
     [<EntryPoint>]
-    main "peter"
+    main2 [1;3;-1;9]

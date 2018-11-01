@@ -7,6 +7,7 @@ namespace normal
     public class Intro
     {
        
+        // return the sum of all the positive values in a
         public int SumPos(IEnumerable<int> a)
         {
             int res = 0;
