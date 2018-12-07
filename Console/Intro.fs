@@ -3,13 +3,13 @@
 module Intro =
 
     // simple functions
-   let Inc a = a + 1
+   let Inc a = a
 
    let Add a b = a + b
 
    let Add2 (a,b) = a+b
 
-   let Add10 = Add 10
+   let Add10 a = Add 10 a
 
    // The following 2 functions are equal - as functions
 
@@ -56,7 +56,11 @@ module Intro =
    let rec power = function
       | (x, 0) -> 1.0         
       | (x, n) -> x * power(x,n-1)    
-   
+
+   let rec power2 (x, n) = match (x,n) with
+                           | (y, 0) -> 1.0         
+                           | (y, m) -> y * power(x,m-1)  
+
    let prefix = function
        | true -> "Mr."
        | false ->  "Ms."
