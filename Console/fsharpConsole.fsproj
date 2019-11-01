@@ -51,6 +51,7 @@
     <Compile Include="Intro.fs" />
     <Compile Include="Program.fs" />
     <Compile Include="first.fs" />
+    <Compile Include="exercises.fs" />
   </ItemGroup>
   <Import Project="$(FSharpTargetsPath)" />
 </Project>
