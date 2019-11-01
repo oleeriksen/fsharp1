@@ -50,6 +50,7 @@
     <None Include="packages.config" />
     <Compile Include="Intro.fs" />
     <Compile Include="Program.fs" />
+    <Compile Include="first.fs" />
   </ItemGroup>
   <Import Project="$(FSharpTargetsPath)" />
 </Project>

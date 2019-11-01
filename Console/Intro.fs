@@ -3,7 +3,7 @@
 module Intro =
 
     // simple functions
-   let Inc a = a
+   let Inc a = a + 1
 
    let Add a b = a + b
 
@@ -13,7 +13,7 @@ module Intro =
 
    // The following 2 functions are equal - as functions
 
-   let AddAndInc = Add2 >> Inc;
+   let AddAndInc = Add2 >> Inc >> Inc;
 
    let AddAndInc2 (a,b) = Inc( Add2 (a,b))
 
@@ -113,5 +113,10 @@ module Intro =
                       | x::rest -> SumPos rest 
 
 
+   let HiddenWord (word:string) = String.replicate word.Length ('*'.ToString())
 
-   
+   let HiddenWord2 (word:string) = new System.String ([1..word.Length] |> List.map (fun c -> '*') |> List.toArray)
+
+   let ConditionalToLower (word:string) = function
+                                          | true -> word
+                                          | false -> word.ToLower()

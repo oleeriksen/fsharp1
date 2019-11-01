@@ -49,4 +49,5 @@ module Main =
 
 
     [<EntryPoint>]
-    main2 [1;3;-1;9]
+    //main2 [1;3;-1;9]
+    main "peter"
